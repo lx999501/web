@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no, width=device-width">
+	<title>的士司機</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			font-size: 0.35rem;
+		}
+		#header{
+			width: 100%;
+			height: 3.35rem;
+			background-color: #35414f;
+			color: #fff;
+		}
+		#header .header_top{
+			padding-top: 0.2rem;
+			font-size: 0.5rem;
+		}
+		#header .header_top p i{
+			font-size: 0.5rem;
+			/*margin-top: 0.8rem;*/
+			line-height: 0.8rem;
+		}
+		#header .header_bottom{
+			/*margin-top: 0.3rem;*/
+		}
+		#header .header_bottom p{
+			text-align: center;
+		}
+		/*#header .header_bottom .h_text{
+			font-size: 0.4rem;
+		}*/
+		#header .header_bottom i{
+			font-size: 1rem;
+		}
+		#banner{
+			background-color: #ec8d2d;
+			height: 2.1rem;
+			width: 100%;
+			margin: 0.2rem 0;
+		}
+		#banner .banner_text{
+			text-align: center;
+			font-size: 0.4rem;
+			color: #fff;
+			margin-top: 0.5rem;
+		}
+
+		#content .imgs{
+			width: 0.8rem;
+			height: 0.8rem;
+			margin: 0 auto;
+			margin-bottom: 5%;
+			background: url(img/未标题-1.png) no-repeat;
+			background-size: 440%;
+			/*box-sizing: border-box;*/
+		}
+		#content .news{
+			background-position: -0.1rem 0;
+		}
+		#content .tasks{
+			background-position: -0.92rem -0.02rem;
+		}
+		#content .training{
+			background-position: -1.8rem -0.04rem;
+		}
+		#content .scan{
+			background-position: -2.67rem -0.01rem;
+		}
+		#content .telecontrol{
+			background-position: -0.03rem  -0.85rem;
+		}
+		#content .discipline{
+			background-position: -0.95rem -0.82rem;
+		}
+		#content .manual{
+			background-position: -1.8rem -0.84rem;
+		}
+		#content .bank{
+			background-position: -2.66rem -0.82rem;
+		}
+		#content .col-xs-3{
+			padding-top: 0.2rem;
+			padding-bottom: 0.2rem;
+		}
+		#content{
+			font-size: 0.4rem;
+			/*margin: 0;*/
+			/*padding: 0;*/
+			width: 100%;
+			margin: 0;
+		}
+		#content .row{
+			text-align: center;
+			border-top: 0.06rem solid #f1f1f1;
+		}
+		.right_border{
+			border-right: 0.06rem solid #f1f1f1;
+		}
+		.bottom_border{
+			border-bottom: 0.06rem solid #f1f1f1;
+		}
+		#flooter{
+			position: fixed;
+			bottom: 0.2rem;
+			width: 100%;
+			font-size: 0.3rem;
+		}
+		.btn{
+			font-size: 0.4rem;
+		}
+	</style>
+</head>
+<body>
+    <div id="header" class="container">
+		<div class="row header_top">
+			<div class="col-xs-3">
+				<p style="float: left; margin-left: 0.6rem;"><i class="icon-user"></i></p>
+			</div>
+			<div class="col-xs-6">
+				<p style="text-align: center;font-size: 0.5rem;">主頁</p>
+			</div>
+			<div class="col-xs-3">
+				<p style="text-align: right; margin-right: 0.6rem;"><i class="icon-off"></i></p>
+			</div>
+		</div>
+		<div class="row header_bottom">
+			<div class="col-xs-6">
+				<p><i class="icon-sun"></i></p>
+				<p class="h_text">今日交易</p>
+			</div>
+			<div class="col-xs-6">
+				<p><i class="icon-book"></i></p>
+				<p class="h_text">賬冊</p>
+			</div>
+		</div>
+    </div>
+    <div class="row container" id="banner">
+    	<div class="col-xs-5" align="center">
+    		<img src="img/logo.png" style="height: 2rem; margin-top: 0.05rem;" />
+    	</div>
+    	<div class="col-xs-7">
+    		<p class="banner_text">One2taxi 司機<br/>營運管理</p>
+    	</div>
+    </div>
+
+    <div class="container" id="content">
+	    <div class="row">
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs news"></div>
+	    		<div>最新消息</div>
+	    	</div>
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs tasks"></div>
+	    		<div>任務中心</div>
+	    	</div>
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs training"></div>
+	    		<div>在線培訓</div>
+	    	</div>
+	    	<div class="col-xs-3">
+	    		<div class="imgs scan"></div>
+	    		<div>掃碼</div>
+	    	</div>
+	    </div>
+	    <div class="row bottom_border">
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs telecontrol"></div>
+	    		<div>遙控登出</div>
+	    	</div>
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs discipline"></div>
+	    		<div>獎懲記錄</div>
+	    	</div>
+	    	<div class="col-xs-3 right_border">
+	    		<div class="imgs manual"></div>
+	    		<div>工作手冊</div>
+	    	</div>
+	    	<div class="col-xs-3">
+	    		<div class="imgs bank"></div>
+	    		<div>銀行卡</div>
+	    	</div>
+	    </div>
+	</div>
+	<div id="flooter">
+		<div class="container">
+			<div class="btn btn-block btn-danger">上線接單</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	function refresh(size) {
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > size) {
+            document.documentElement.style.fontSize = size / (size/100) + "px";
+        } else {
+            document.documentElement.style.fontSize = deviceWidth / (size/100) + "px";
+        }
+    }
+    refresh(900);
+    window.onresize = function() {
+            refresh(900);
+    }
+    $(function(){
+    	$(".news").click(function() {
+    		window.location.href = "news.html"
+    	});
+    	$(".tasks").click(function() {
+    		window.location.href = "task.html"
+    	});
+    	$(".discipline").click(function() {
+    		window.location.href = "discipline_records.html"
+    	});
+    	$(".bank").click(function() {
+    		window.location.href = "bank_card.html"
+    	});
+    })
+</script>
+</html>

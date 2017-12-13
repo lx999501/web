@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #F1F2F7;
+			}
+			#fixed{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			.header_top{
+				position: relative;
+				text-align: center;
+				background: #35414f;
+				width: 100%;
+				height: 1rem;
+				color: #fff;
+				font-size: 0.4rem;
+				line-height: 1rem;
+			}
+			.header_top i{
+				position: absolute;
+				top: 0.23rem;
+				color: #fff;
+				z-index: 9;
+				left: 0.4rem;
+				font-size: 0.5rem;
+			}
+			#imgs{
+				width: 1.8rem;
+				height: 1.6rem;
+			}
+			.dates{
+				 font-size: 0.4rem;
+				 margin: 0.2rem 0.2rem;
+			}
+			.panel-body{
+				font-size: 0.3rem;
+			}
+			.panel-body{
+				background: white;
+			}
+			.times{
+				float: right;
+				line-height: 0.7rem;
+				margin-right: 0.2rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fixed">
+			<div class="header_top">
+				<i class="icon-mail-reply" onclick="javascript:history.back(-1)"></i>
+				<div>最新消息</div>
+			</div>
+		</div>
+		<div style="width: 100%;height: 1rem;"></div>
+		<div class="">
+			<div class="dates">2017-1-12</div>
+			<div class="panel-body">
+				<div class="tab-content tasi-tab">
+					<div class="tab-pane active">
+						<div class="media">
+							<a class="pull-left thumb p-thumb">
+								<img src="img/logo.png" id="imgs"/>
+							</a>
+							<div class="media-body">
+								<a class=" p-head"  style="font-size: 0.4rem;">asdsda</a>
+								<span class="times">00：00</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="dates">2017-1-12</div>
+			<div class="panel-body">
+				<div class="tab-content tasi-tab">
+					<div class="tab-pane active">
+						<div class="media">
+							<a class="pull-left thumb p-thumb">
+								<img src="img/logo.png" id="imgs"/>
+							</a>
+							<div class="media-body">
+								<a class=" p-head"  style="font-size: 0.4rem;">asdsda</a>
+								<span class="times">00：00</span>
+								<p style="text-align: inherit">撒大撒旦撒旦是大多数大多是哒哒哒哒哒声阿斯达撒旦撒旦撒旦撒打算大撒旦撒旦撒旦撒旦撒打算大三大四的撒打算大三的撒大声大声道大撒旦撒旦撒打算大多数大撒旦撒旦撒旦撒大声大声道</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			function refresh(size) {
+		        var deviceWidth = document.documentElement.clientWidth;
+		        if(deviceWidth > size) {
+		            document.documentElement.style.fontSize = size / (size/100) + "px";
+		        } else {
+		            document.documentElement.style.fontSize = deviceWidth / (size/100) + "px";
+		        }
+		    }
+		    refresh(900);
+		    window.onresize = function() {
+		            refresh(900);
+		    }
+		</script>
+	</body>
+</html>

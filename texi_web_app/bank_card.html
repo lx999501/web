@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no, width=device-width">
+	<title>銀行卡</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+	<link href="css/style.css" rel="stylesheet">
+	<style type="text/css">
+			#fixed{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 888;
+			}
+			.header_top{
+				position: relative;
+				text-align: center;
+				background: #35414f;
+				width: 100%;
+				height: 1rem;
+				color: #fff;
+				font-size: 0.4rem;
+				line-height: 1rem;
+			}
+			.header_top i{
+				position: absolute;
+				top: 0.23rem;
+				color: #fff;
+				z-index: 999;
+				left: 0.4rem;
+				font-size: 0.5rem;
+			}
+	</style>
+</head>
+<body>
+	<div id="fixed">
+		<div class="header_top">
+			<i class="icon-mail-reply" onclick="javascript:history.back(-1)"></i>
+			<div>銀行卡</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 1rem;"></div>
+<div class="container">
+	<aside class="profile-nav alt green-border">
+		<section class="panel">
+			<div class="user-heading alt green-bg" style="text-align: center;">
+				<h1>113 248 983 4578</h1>
+				<p>中國民生銀行 <span>储蓄卡</span></p>
+				<span style="position: relative; bottom: -25px; right: -43%;">默認</span>
+			</div>
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="javascript:;"><i class="icon-user"></i> 卡片持有人名稱 </a>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="icon-hospital"></i> 開卡銀行開戶行名稱 </a>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="icon-time"></i> 有效期 </a>
+				</li>
+			</ul>
+		</section>
+	</aside>
+		<aside class="profile-nav">
+		<section class="panel">
+			<div class="user-heading" style="text-align: center;">
+				<h1>卡号12345678</h1>
+				<p>中國民生銀行 <span>儲蓄卡</span></p>
+			</div>
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="javascript:;"><i class="icon-user"></i> 卡片持有人名稱 </a>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="icon-hospital"></i> 開卡銀行開戶行名稱 </a>
+				</li>
+				<li>
+					<a href="javascript:;"><i class="icon-time"></i> 有效期 </a>
+				</li>
+			</ul>
+		</section>
+	</aside>
+</div>
+<div class="container">
+	<button type="button" class="btn btn-block btn-primary"><i class="icon-plus"></i>　添加新銀行卡</button>
+</div>
+</body>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	function refresh(size) {
+		var deviceWidth = document.documentElement.clientWidth;
+		if(deviceWidth > size) {
+			document.documentElement.style.fontSize = size / (size/100) + "px";
+		} else {
+			document.documentElement.style.fontSize = deviceWidth / (size/100) + "px";
+		}
+	}
+	refresh(900);
+	window.onresize = function() {
+		refresh(900);
+	}
+</script>
+</html>
