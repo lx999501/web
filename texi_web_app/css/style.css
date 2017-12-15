@@ -3749,7 +3749,7 @@ table.sliders tr td {
 .p-head {
     color: #f77b6f;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 30px;
 }
 
 .cmt-head {
@@ -3758,14 +3758,15 @@ table.sliders tr td {
 }
 
 .p-thumb img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
 }
 
 .tasi-tab .media-body p {
     /*color: #b8bac6;*/
+   font-size: 25px;
 }
 
 

@@ -6,12 +6,16 @@
 	<title>的士司機</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<style type="text/css">
 		*{
 			padding: 0;
 			margin: 0;
 			font-size: 0.35rem;
 		}
+		.ui-loader-default{ display:none}
+		.ui-mobile-viewport{ border:none;}
+		.ui-page {padding: 0; margin: 0; outline: 0;}
 		#header{
 			width: 100%;
 			height: 3.35rem;
@@ -24,18 +28,13 @@
 		}
 		#header .header_top p i{
 			font-size: 0.5rem;
-			/*margin-top: 0.8rem;*/
 			line-height: 0.8rem;
 		}
 		#header .header_bottom{
-			/*margin-top: 0.3rem;*/
 		}
 		#header .header_bottom p{
 			text-align: center;
 		}
-		/*#header .header_bottom .h_text{
-			font-size: 0.4rem;
-		}*/
 		#header .header_bottom i{
 			font-size: 1rem;
 		}
@@ -43,7 +42,7 @@
 			background-color: #ec8d2d;
 			height: 2.1rem;
 			width: 100%;
-			margin: 0.2rem 0;
+			margin: 0;
 		}
 		#banner .banner_text{
 			text-align: center;
@@ -52,7 +51,7 @@
 			margin-top: 0.5rem;
 		}
 
-		#content .imgs{
+		.imgs{
 			width: 0.8rem;
 			height: 0.8rem;
 			margin: 0 auto;
@@ -61,50 +60,53 @@
 			background-size: 440%;
 			/*box-sizing: border-box;*/
 		}
-		#content .news{
+		.news{
+			margin-top: 0.1rem;
 			background-position: -0.1rem 0;
 		}
-		#content .tasks{
+		.tasks{
 			background-position: -0.92rem -0.02rem;
 		}
-		#content .training{
+		.training{
 			background-position: -1.8rem -0.04rem;
 		}
-		#content .scan{
+		.scan{
 			background-position: -2.67rem -0.01rem;
 		}
-		#content .telecontrol{
+		.telecontrol{
 			background-position: -0.03rem  -0.85rem;
 		}
-		#content .discipline{
+		.reward{
 			background-position: -0.95rem -0.82rem;
 		}
-		#content .manual{
+		.manual{
 			background-position: -1.8rem -0.84rem;
 		}
-		#content .bank{
+		.bank{
 			background-position: -2.66rem -0.82rem;
 		}
-		#content .col-xs-3{
-			padding-top: 0.2rem;
-			padding-bottom: 0.2rem;
+		.book{
+			background-position: -0.05rem -1.6rem;
+		}
+		#content .col-xs-4{
+			padding: 0.6rem 0;
+			background: #31B0D5;
+			border-left: 0.1rem solid #f1f2f7;
 		}
 		#content{
 			font-size: 0.4rem;
-			/*margin: 0;*/
-			/*padding: 0;*/
 			width: 100%;
 			margin: 0;
+			color: #fff;
 		}
 		#content .row{
 			text-align: center;
-			border-top: 0.06rem solid #f1f1f1;
 		}
 		.right_border{
-			border-right: 0.06rem solid #f1f1f1;
+			border-right: 0.1rem solid #f1f2f7;
 		}
 		.bottom_border{
-			border-bottom: 0.06rem solid #f1f1f1;
+			border-bottom: 0.1rem solid #f1f2f7;
 		}
 		#flooter{
 			position: fixed;
@@ -115,86 +117,99 @@
 		.btn{
 			font-size: 0.4rem;
 		}
+		.list-unstyled{
+			margin-top: 0.26rem;
+		}
+		#newes{
+			border-top: 0.1rem solid #f1f1f1;
+			border-bottom: 0.1rem solid #f1f1f1;
+			margin: 0.2rem auto;
+			background: white;
+		}
+		.mar_left{
+			margin-left: 0.4rem;
+		}
+		#box .btn-info{
+			width: 2.6rem;
+			height: 2.6rem;
+			padding-top: 0.5rem;
+		}
+		.num{
+			background: none;
+			font-size: 0.8rem;
+			line-height: 0.8rem;
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
-    <div id="header" class="container">
-		<div class="row header_top">
-			<div class="col-xs-3">
-				<p style="float: left; margin-left: 0.6rem;"><i class="icon-user"></i></p>
-			</div>
-			<div class="col-xs-6">
-				<p style="text-align: center;font-size: 0.5rem;">主頁</p>
-			</div>
-			<div class="col-xs-3">
-				<p style="text-align: right; margin-right: 0.6rem;"><i class="icon-off"></i></p>
-			</div>
-		</div>
-		<div class="row header_bottom">
-			<div class="col-xs-6">
-				<p><i class="icon-sun"></i></p>
-				<p class="h_text">今日交易</p>
-			</div>
-			<div class="col-xs-6">
-				<p><i class="icon-book"></i></p>
-				<p class="h_text">賬冊</p>
-			</div>
-		</div>
-    </div>
-    <div class="row container" id="banner">
-    	<div class="col-xs-5" align="center">
-    		<img src="img/logo.png" style="height: 2rem; margin-top: 0.05rem;" />
+	<div class="row" id="banner">
+    	<div class="col-xs-4">
+    		<img src="img/logo.png" style="height: 1.5rem; margin-top: 0.3rem;" />
     	</div>
-    	<div class="col-xs-7">
+    	<div class="col-xs-8">
     		<p class="banner_text">One2taxi 司機<br/>營運管理</p>
     	</div>
     </div>
-
-    <div class="container" id="content">
-	    <div class="row">
-	    	<div class="col-xs-3 right_border">
+    <div class="container" id="newes">
+    	<div class="row" style="height: 1rem;">
+	    	<div class="col-xs-2">
 	    		<div class="imgs news"></div>
-	    		<div>最新消息</div>
 	    	</div>
-	    	<div class="col-xs-3 right_border">
-	    		<div class="imgs tasks"></div>
-	    		<div>任務中心</div>
+	    	<div class="col-xs-10">
+	    		<ul class="list-unstyled">
+	    			<li>今天又是充满希望的一天</li>
+	    		</ul>
 	    	</div>
-	    	<div class="col-xs-3 right_border">
-	    		<div class="imgs training"></div>
-	    		<div>在線培訓</div>
-	    	</div>
-	    	<div class="col-xs-3">
+	    </div>
+    </div>
+    <div class="container" id="content">
+	    <div class="row bottom_border">
+	    	<div class="col-xs-4">
 	    		<div class="imgs scan"></div>
-	    		<div>掃碼</div>
+	    		<div>掃碼登出</div>
+	    	</div>
+	    	<div class="col-xs-4">
+	    		<div class="num" style="height: 0.95rem;">10000</div>
+	    		<div>今日交易</div>
+	    	</div>
+	    	<div class="col-xs-4 right_border">
+	    		<div class="imgs book"></div>
+	    		<div>账册</div>
 	    	</div>
 	    </div>
 	    <div class="row bottom_border">
-	    	<div class="col-xs-3 right_border">
-	    		<div class="imgs telecontrol"></div>
-	    		<div>遙控登出</div>
+	    	<div class="col-xs-4">
+	    		<div class="imgs reward"></div>
+	    		<div>獎勵記錄</div>
 	    	</div>
-	    	<div class="col-xs-3 right_border">
-	    		<div class="imgs discipline"></div>
-	    		<div>獎懲記錄</div>
+	    	<div class="col-xs-4">
+	    		<div class="imgs tasks"></div>
+	    		<div>任務中心</div>
 	    	</div>
-	    	<div class="col-xs-3 right_border">
-	    		<div class="imgs manual"></div>
-	    		<div>工作手冊</div>
-	    	</div>
-	    	<div class="col-xs-3">
+	    	<div class="col-xs-4 right_border">
 	    		<div class="imgs bank"></div>
 	    		<div>銀行卡</div>
 	    	</div>
 	    </div>
-	</div>
-	<div id="flooter">
-		<div class="container">
-			<div class="btn btn-block btn-danger">上線接單</div>
-		</div>
+	    <div class="row">
+	    	<div class="col-xs-4">
+	    		<div class="imgs training"></div>
+	    		<div>在線培訓</div>
+	    	</div>
+	    	<div class="col-xs-4">
+	    		<div class="imgs manual"></div>
+	    		<div>使用手冊</div>
+	    	</div>
+	    	<div class="col-xs-4 right_border">
+	    		<div class="imgs telecontrol"></div>
+	    		<div>遙控登出</div>
+	    	</div>
+	    </div>
 	</div>
 </body>
 <script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
 <script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 	function refresh(size) {
@@ -210,18 +225,34 @@
             refresh(900);
     }
     $(function(){
-    	$(".news").click(function() {
-    		window.location.href = "news.html"
+    	$(".num").parent().click(function() {
+    		window.location.href = "today.html"
     	});
-    	$(".tasks").click(function() {
+    	$(".tasks").parent().click(function() {
     		window.location.href = "task.html"
     	});
-    	$(".discipline").click(function() {
-    		window.location.href = "discipline_records.html"
+    	$(".reward").parent().click(function() {
+    		window.location.href = "reward.html"
     	});
-    	$(".bank").click(function() {
+    	$(".bank").parent().click(function() {
     		window.location.href = "bank_card.html"
     	});
+    	$(".training").parent().click(function(){
+    		window.location.href = "train.html"
+    	})
+    	$(".book").parent().click(function(){
+    		window.location.href = "bills.html"
+    	})
+		$(".manual").parent().click(function(){
+    		window.location.href = "manual.html"
+    	})
+
+    	$(".col-xs-4").on("touchstart",function () {
+    		$(this).css("background","#3590ab")
+    	})
+    	$(".col-xs-4").on("touchend",function () {
+    		$(this).css("background","#31B0D5")
+    	})
     })
 </script>
 </html>

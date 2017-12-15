@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在線培訓</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style type="text/css">
+			#content{
+				width: 100%;
+				margin: 0;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#fixed{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			.header_top{
+				position: relative;
+				text-align: center;
+				background: #35414f;
+				width: 100%;
+				height: 1rem;
+				color: #fff;
+				font-size: 0.4rem;
+				line-height: 1rem;
+			}
+			.header_top i{
+				position: absolute;
+				top: 0.23rem;
+				color: #fff;
+				z-index: 1;
+				left: 0.4rem;
+				font-size: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="fixed">
+			<div class="header_top">
+				<i class="icon-chevron-left" onclick="javascript:history.back(-1)"></i>
+				<div>在線培訓</div>
+			</div>
+		</div>
+		<div style="width: 100%;height: 1rem;"></div>
+		<div class="container" id="content">
+			<div class="row">
+				<div class="col-xs-12">
+					<section class="panel">
+			          <div class="panel-body">
+			              <div class="tab-content tasi-tab">
+			                  <div class="tab-pane active" id="popular">
+			                      <article class="media">
+			                          <a class="pull-left thumb p-thumb">
+			                              <img src="img/product1.jpg">
+			                          </a>
+			                          <div class="media-body">
+			                              <a class=" p-head" href="#">Item One Tittle</a>
+			                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			                          </div>
+			                      </article>
+			                      <article class="media">
+			                          <a class="pull-left thumb p-thumb">
+			                              <img src="img/product2.png">
+			                          </a>
+			                          <div class="media-body">
+			                              <a class=" p-head" href="#">Item Two Tittle</a>
+			                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			                          </div>
+			                      </article>
+			                      <article class="media">
+			                          <a class="pull-left thumb p-thumb">
+			                              <img src="img/product3.png">
+			                          </a>
+			                          <div class="media-body">
+			                              <a class=" p-head" href="#">Item Three Tittle</a>
+			                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			                          </div>
+			                      </article>
+			                  </div>
+			                  <div class="tab-pane " id="recent">
+			                      Recent Item goes here
+			                  </div>
+			              </div>
+			          </div>
+			      </section>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function refresh(size) {
+		        var deviceWidth = document.documentElement.clientWidth;
+		        if(deviceWidth > size) {
+		            document.documentElement.style.fontSize = size / (size/100) + "px";
+		        } else {
+		            document.documentElement.style.fontSize = deviceWidth / (size/100) + "px";
+		        }
+		    }
+		    refresh(900);
+		    window.onresize = function() {
+		            refresh(900);
+		    }
+		</script>
+	</body>
+</html>
