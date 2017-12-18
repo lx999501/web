@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no, width=device-width">
-	<title>的士司機</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="img/favicon.html">
+    <title>的士司機</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.css"/>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
 	<style type="text/css">
 		*{
 			padding: 0;
@@ -50,7 +55,6 @@
 			color: #fff;
 			margin-top: 0.5rem;
 		}
-
 		.imgs{
 			width: 0.8rem;
 			height: 0.8rem;
@@ -140,9 +144,49 @@
 			line-height: 0.8rem;
 			text-align: center;
 		}
+        #fixed{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .header_top{
+            position: relative;
+            text-align: center;
+            background: #35414f;
+            width: 100%;
+            height: 1rem;
+            color: #fff;
+            font-size: 0.4rem;
+            line-height: 1rem;
+        }
+        .header_top .left_i{
+            position: absolute;
+            top: 0.23rem;
+            color: #fff;
+            z-index: 1;
+            left: 0.4rem;
+            font-size: 0.5rem;
+        }
+        .header_top .right_i{
+            position: absolute;
+            top: 0.23rem;
+            color: #fff;
+            z-index: 1;
+            right: 0.4rem;
+            font-size: 0.5rem;
+        }
 	</style>
 </head>
 <body>
+        <div id="fixed">
+            <div class="header_top">
+                <i class="icon-user left_i" onclick="javascript:history.back(-1)"></i>
+                <div>主頁</div>
+                <i class="icon-off right_i" onclick="javascript:history.back(-1)"></i>
+            </div>
+        </div>
+        <div style="width: 100%;height: 1rem;"></div>
 	<div class="row" id="banner">
     	<div class="col-xs-4">
     		<img src="img/logo.png" style="height: 1.5rem; margin-top: 0.3rem;" />
