@@ -6,11 +6,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="Mosaddek">
 	<meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-	<link rel="shortcut icon" href="img/favicon.html">
 	<title>註冊</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-reset.css" rel="stylesheet">
-	<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/style-responsive.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
@@ -21,13 +19,7 @@
 	<style type="text/css">
 	.form-signin {
     max-width: 400px;
-    /*margin: auto 0;*/
 	}
-	/*.imges{
-		width: 140px;
-		height: 80px;
-		display: none;
-	}*/
 	.files{
 		position: relative;
 		top:-45px;
@@ -46,68 +38,63 @@
 	.imges_wrap{
 		height: 90px;
 	}
+	.form-signin {
+    margin: 80px auto 0;
+	}
 	</style>
 </head>
 	<body class="login-body">
 		<div class="container">
-			<form class="form-signin" action="index.html">
+			<form class="form-signin">
 				<h2 class="form-signin-heading">註冊</h2>
 				<div class="login-wrap">
-					<input type="text" class="form-control" placeholder="中文名稱" autofocus />
-					<input type="text" class="form-control" placeholder="英文名稱" autofocus />
-					<input type="text" class="form-control" placeholder="手機號碼" autofocus />
-					<input type="text" class="form-control" placeholder="身份證號" autofocus />
-					<input type="text" class="form-control" placeholder="的士車行" autofocus />
-					<input type="password" class="form-control" placeholder="密碼" />
-					<input type="password" class="form-control" placeholder="確認密碼" />
-					<input type="text" placeholder="身份證號" class="form-control"/>
+					<span></span>
+					<input type="text" class="form-control" placeholder="中文名稱" name="username"/>
+					<span></span>
+					<input type="text" class="form-control" placeholder="英文名稱" name="enname" />
+					<span></span>
+					<input type="text" class="form-control" placeholder="郵箱" name="email" />
+					<span></span>
+					<input type="text" class="form-control" placeholder="手機號碼" name="phone" />
+					<span></span>
+					<input type="text" class="form-control" placeholder="身份證號" name="idcard" />
+					<span></span>
+					<input type="text" class="form-control" placeholder="的士車行名稱" name="taxich" />
+					<span></span>
+					<input type="password" name="password" class="form-control" placeholder="密碼" />
+					<span></span>
+					<input type="password" name="repass" class="form-control" placeholder="確認密碼" />
+					<span></span>
+					<input type="text" name="address" placeholder="聯絡地址" class="form-control"/>
+					<span></span>
+					<input type="text" name="taxiid" placeholder="的士證號" class="form-control"/>
+					<span></span>
+					<input type="text" name="driverid" placeholder="駕駛證號" class="form-control"/>
 					<form class="form-group">
 						<input type="button" value="請上傳身份證照片" class="btn btn-success btn-block"/>
-						<input type="file" id="file_upload" class="files">
+						<input type="file" id="file_upload" class="files id_upload">
 						<div style="margin-top: -30px;" class="imges_wrap">
 							<img src="" class="imges" id="img1"/>
 						</div>
 					</form>
-					<input type="text" placeholder="的士證號" class="form-control"/>
-					<form class="form-group1">
-						<input type="button" value="請上傳的士證照片" class=" btn btn-success btn-block"/>
-						<input type="file" id="file_upload" class="files">
-						<div style="margin-top: -43px;" class="imges_wrap">
+					<form class="form-group">
+						<input type="button" value="請上傳的士證照片" class="btn btn-success btn-block"/>
+						<input type="file" id="file_upload" class="files taxi_upload">
+						<div style="margin-top: -30px;" class="imges_wrap">
 							<img src="" class="imges" id="img2"/>
 						</div>
 					</form>
-					<input type="text" placeholder="駕駛證號" class="form-control"/>
-					<form class="form-group2">
-						<input type="button" value="請上傳駕駛證照片" class=" btn btn-success btn-block"/>
-						<input type="file" id="file_upload" class="files">
-						<div style="margin-top: -40px;" class="imges_wrap">
+					<form class="form-group">
+						<input type="button" value="請上傳駕駛證照片" class="btn btn-success btn-block"/>
+						<input type="file" id="file_upload" class="files driver_upload">
+						<div style="margin-top: -30px;" class="imges_wrap">
 							<img src="" class="imges" id="img3"/>
 						</div>
 					</form>
-					<button class="btn btn-lg btn-login btn-block" type="submit">完成</button>
+						<div class="btn btn-lg btn-login btn-block" id="go_request">提交</div>
 				</div>
 			</form>
 		</div>
-		<script type="text/javascript">
-			$(function () {
-			    $("#file_upload").change(function () {
-			        var $file = $(this);
-			        var fileObj = $file[0];
-			        var windowURL = window.URL || window.webkitURL;
-			        var dataURL;
-			        var $img = $("#img1");
-			        if (fileObj && fileObj.files && fileObj.files[0]) {
-			            dataURL = windowURL.createObjectURL(fileObj.files[0]);
-			            $img.attr('src', dataURL)
-			        } else {
-			            dataURL = $file.val();
-			            var imgObj = document.getElementById("img1");
-			            imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-			            imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
-			        }
-			    });
-			});
-			
-		</script>
-	</body>
+<script type="text/javascript" src="js/register.js"></script>
+</body>
 </html>
